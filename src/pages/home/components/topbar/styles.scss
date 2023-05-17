@@ -1,0 +1,196 @@
+.topbar {
+  .appbar {
+    background: transparent;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  }
+
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+
+    .link {
+      color: #7d7d7d;
+      margin: 0px 20px;
+      font-size: 15px;
+    }
+
+    .active_link {
+      margin: 0px 20px;
+      position: relative;
+      width: 50px;
+
+      .text {
+        color: #111111;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .divider {
+        background: #ff5a5f;
+        position: absolute;
+        left: 0;
+        bottom: -27px;
+        right: 0;
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      width: 100px;
+      height: 30px;
+    }
+  }
+
+  .filterBar {
+    background: #fff;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+    position: relative;
+    width: 100%;
+    z-index: 10;
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 30px;
+
+      .gridView {
+        height: 48px;
+        width: 48px;
+        background: black;
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .listView {
+        height: 48px;
+        width: 48px;
+        background: #f3f3f2;
+        border-radius: 5px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #717171;
+      }
+
+      .filter {
+        border-radius: 5px;
+        background: #f3f3f2;
+        color: #717171;
+      }
+
+      .location {
+        position: relative;
+        border-radius: 10px;
+        background-color: #f3f3f2;
+        width: 230px;
+        margin: 0 10px;
+        height: 100%;
+
+        .wrapper {
+          padding: 10px;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: -10px;
+          pointer-events: none;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+
+          svg {
+            color: #717171;
+          }
+        }
+      }
+
+      .date {
+        position: relative;
+        border-radius: 10px;
+        background-color: #f3f3f2;
+        width: 150px;
+        margin: 0 10px;
+
+        .wrapper {
+          padding: 10px;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: -10px;
+          pointer-events: none;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+
+          svg {
+            color: #717171;
+          }
+        }
+      }
+
+      .guests {
+        position: relative;
+        border-radius: 10px;
+        background-color: #f3f3f2;
+        width: 175px;
+        margin: 0 10px;
+
+        button {
+          background: white;
+          border-radius: 5px;
+          height: 30px;
+          width: 30px;
+        }
+
+        .left {
+          padding: 10px;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: -10px;
+          pointer-events: none;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+
+          svg {
+            color: #ff5a5f;
+          }
+        }
+
+        .right {
+          padding: 10px;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: -10px;
+          pointer-events: none;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+
+          svg {
+            color: #ff5a5f;
+          }
+        }
+      }
+    }
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+}
