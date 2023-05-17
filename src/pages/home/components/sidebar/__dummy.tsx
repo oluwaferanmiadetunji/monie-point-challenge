@@ -19,6 +19,7 @@ export const NavItems = [
   {
     text: 'All Homes',
     icon: <HomeIcon />,
+    active: true,
   },
   {
     text: 'Amazing Views',

@@ -6,11 +6,15 @@
 }
 
 .sidebar:hover {
-  width: 250px;
+  width: 300px;
 }
 
 .sidebar:hover .list-item .list-item__text {
   display: block;
+}
+
+.active {
+  border-right: 3px solid #ff5a5f;
 }
 
 .list-item {

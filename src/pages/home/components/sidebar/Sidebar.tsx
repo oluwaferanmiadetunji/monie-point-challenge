@@ -10,8 +10,12 @@ import { NavItems } from './__dummy'
 export default function Sidebar() {
   return (
     <List className="sidebar">
-      {NavItems.map(({ text, icon }) => (
-        <ListItem disablePadding className="list-item" key={text}>
+      {NavItems.map(({ text, icon, active }) => (
+        <ListItem
+          disablePadding
+          className={active ? 'list-item active' : 'list-item'}
+          key={text}
+        >
           <ListItemIcon className="list-item__icon">{icon}</ListItemIcon>
           <ListItemText
             primary={
