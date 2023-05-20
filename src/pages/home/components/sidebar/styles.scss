@@ -7,10 +7,12 @@
 
 .sidebar:hover {
   width: 300px;
+  // transition: width 0.5s;
 }
 
 .sidebar:hover .list-item .list-item__text {
   display: block;
+  transition: display 1s;
 }
 
 .active {

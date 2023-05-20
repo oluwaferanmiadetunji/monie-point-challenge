@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Box,
   Grid,
@@ -12,6 +13,7 @@ import {
 import { Items } from './__dummy'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import StarRateIcon from '@mui/icons-material/StarRate'
+import Drawer from './Drawer'
 
 type CardItemProps = {
   item: {
@@ -32,7 +34,8 @@ const CardItem = ({ item }: CardItemProps) => {
         component="img"
         height="194"
         image={item.image}
-        alt="Paella dish"
+        loading="eager"
+        alt={item.name}
       />
       <CardContent sx={{ marginBottom: '60px' }}>
         <Typography variant="body2" className="header">
@@ -66,15 +69,29 @@ const CardItem = ({ item }: CardItemProps) => {
 }
 
 const Section = () => {
+  const [open, setOpen] = useState(false)
+  const [item, setItem] = useState({})
+
   return (
     <Box className="section">
       <Grid container spacing={3}>
         {Items.map((item) => (
-          <Grid key={item.name} item xs={3} sx={{ marginBottom: '10px' }}>
+          <Grid
+            key={item.name}
+            item
+            xs={3}
+            sx={{ marginBottom: '10px' }}
+            onClick={() => {
+              setItem(item)
+              setOpen(true)
+            }}
+          >
             <CardItem item={item} />
           </Grid>
         ))}
       </Grid>
+
+      <Drawer open={open} setOpen={setOpen} item={item} />
     </Box>
   )
 }
